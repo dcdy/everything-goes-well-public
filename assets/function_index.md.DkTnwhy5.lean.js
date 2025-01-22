@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./chunks/framework.CNVI-k7t.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"function/index.md","filePath":"function/index.md","lastUpdated":1737572953000}'),a={name:"function/index.md"};function o(c,r,i,s,d,p){return n(),t("div")}const m=e(a,[["render",o]]);export{_ as __pageData,m as default};
