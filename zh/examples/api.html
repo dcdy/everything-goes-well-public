@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>运行时 API 示例 | VitePress</title>
+    <meta name="description" content="A VitePress site">
+    <meta name="generator" content="VitePress v1.6.3">
+    <link rel="preload stylesheet" href="/everything-goes-well-public/assets/style.pzsy15ts.css" as="style">
+    <link rel="preload stylesheet" href="/everything-goes-well-public/vp-icons.css" as="style">
+    <script type="module" src="/everything-goes-well-public/assets/chunks/metadata.c621ab11.js"></script>
+    <script type="module" src="/everything-goes-well-public/assets/app.DcLsAWt9.js"></script>
+    <link rel="preload" href="/everything-goes-well-public/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/everything-goes-well-public/assets/chunks/theme.BHu8mmnR.js">
+    <link rel="modulepreload" href="/everything-goes-well-public/assets/chunks/framework.CF7B9edl.js">
+    <link rel="modulepreload" href="/everything-goes-well-public/assets/zh_examples_api.md.CxUdZ4_L.lean.js">
+    <link rel="icon" type="image/svg+xml" href="/everything-goes-well-public/logo/vitepress-logo-mini.svg">
+    <link rel="icon" type="image/png" href="/everything-goes-well-public/logo/vitepress-logo-mini.png">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-6c7cdc44><!--[--><!--]--><!--[--><span tabindex="-1" data-v-ca31ed51></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-ca31ed51>Skip to content</a><!--]--><!----><header class="VPNav" data-v-6c7cdc44 data-v-cdcd35d3><div class="VPNavBar" data-v-cdcd35d3 data-v-7cd5de9c><div class="wrapper" data-v-7cd5de9c><div class="container" data-v-7cd5de9c><div class="title" data-v-7cd5de9c><div class="VPNavBarTitle" data-v-7cd5de9c data-v-aaec9b93><a class="title" href="/everything-goes-well-public/" data-v-aaec9b93><!--[--><!--]--><!--[--><img class="VPImage logo" src="/everything-goes-well-public/logo/logo.png" width="24" height="24" alt data-v-8356cd70><!--]--><span data-v-aaec9b93>四时顺遂</span><!--[--><!--]--></a></div></div><div class="content" data-v-7cd5de9c><div class="content-body" data-v-7cd5de9c><!--[--><!--]--><div class="VPNavBarSearch search" data-v-7cd5de9c><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="搜索文档"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">搜索文档</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-7cd5de9c data-v-7cc9c189><span id="main-nav-aria-label" class="visually-hidden" data-v-7cc9c189> Main Navigation </span><!--[--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-7cc9c189 data-v-1dd0e4da><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-1dd0e4da><span class="text" data-v-1dd0e4da><!----><span data-v-1dd0e4da>常用</span><span class="vpi-chevron-down text-icon" data-v-1dd0e4da></span></span></button><div class="menu" data-v-1dd0e4da><div class="VPMenu" data-v-1dd0e4da data-v-8a5b600a><div class="items" data-v-8a5b600a><!--[--><!--[--><div class="VPMenuGroup" data-v-8a5b600a data-v-f572c90f><!----><!--[--><!--[--><div class="VPMenuLink" data-v-f572c90f data-v-a548e56f><a class="VPLink link" href="/everything-goes-well-public/zh/templates/Index" data-v-a548e56f><!--[--><span data-v-a548e56f>个人开发模板</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-f572c90f data-v-a548e56f><a class="VPLink link" href="/everything-goes-well-public/zh/grammars/Index" data-v-a548e56f><!--[--><span data-v-a548e56f>常用语法</span><!--]--></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-f572c90f data-v-a548e56f><a class="VPLink link" href="/everything-goes-well-public/zh/functions/%E5%BE%AE%E4%BF%A1%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95" data-v-a548e56f><!--[--><span data-v-a548e56f>常用功能</span><!--]--></a></div><!--]--><!--]--></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/everything-goes-well-public/zh/vue/Index" tabindex="0" data-v-7cc9c189 data-v-92456d69><!--[--><span data-v-92456d69>Vue</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/everything-goes-well-public/zh/electron/Index" tabindex="0" data-v-7cc9c189 data-v-92456d69><!--[--><span data-v-92456d69>Electron</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/everything-goes-well-public/zh/uniapp/Index" tabindex="0" data-v-7cc9c189 data-v-92456d69><!--[--><span data-v-92456d69>uni-app</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/everything-goes-well-public/zh/styles/Index" tabindex="0" data-v-7cc9c189 data-v-92456d69><!--[--><span data-v-92456d69>样式</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/everything-goes-well-public/zh/others/Index" tabindex="0" data-v-7cc9c189 data-v-92456d69><!--[--><span data-v-92456d69>杂七杂八</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/everything-goes-well-public/zh/bugs/Index" tabindex="0" data-v-7cc9c189 data-v-92456d69><!--[--><span data-v-92456d69>Bug</span><!--]--></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-7cc9c189 data-v-1dd0e4da><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-1dd0e4da><span class="text" data-v-1dd0e4da><!----><span data-v-1dd0e4da>设置</span><span class="vpi-chevron-down text-icon" data-v-1dd0e4da></span></span></button><div class="menu" data-v-1dd0e4da><div class="VPMenu" data-v-1dd0e4da data-v-8a5b600a><div class="items" data-v-8a5b600a><!--[--><!--[--><div class="set" data-v-8a5b600a data-v-d9dc8017><div class="set-input" data-v-d9dc8017><input type="text" value="" style="width:100px;padding:0 6px;" data-v-d9dc8017></div><div style="display:none;" class="" data-v-d9dc8017><div class="set-switch" data-v-d9dc8017><div class="" data-v-d9dc8017>隐藏左侧</div><div class="custom-checkbox" data-v-d9dc8017><input type="checkbox" data-v-d9dc8017></div></div><div class="set-switch" data-v-d9dc8017><div class="" data-v-d9dc8017>隐藏右侧</div><div class="custom-checkbox" data-v-d9dc8017><input type="checkbox" data-v-d9dc8017></div></div><div class="set-switch" data-v-d9dc8017><div class="" data-v-d9dc8017>全屏</div><div class="custom-checkbox" data-v-d9dc8017><input type="checkbox" data-v-d9dc8017></div></div></div></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-7cd5de9c data-v-f16bf43a><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-f16bf43a data-v-9ec7c3ff data-v-f63253c3><span class="check" data-v-f63253c3><span class="icon" data-v-f63253c3><!--[--><span class="vpi-sun sun" data-v-9ec7c3ff></span><span class="vpi-moon moon" data-v-9ec7c3ff></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-7cd5de9c data-v-b925a4f2 data-v-6a9f60a3><!--[--><a class="VPSocialLink no-icon" href="https://github.com/dcdy/everything-goes-well/" aria-label="github" target="_blank" rel="noopener" data-v-6a9f60a3 data-v-680784e2><span class="vpi-social-github"></span></a><a class="VPSocialLink no-icon" href="https://gitee.com/xia_mei_ting/everything-goes-well" aria-label target="_blank" rel="noopener" data-v-6a9f60a3 data-v-680784e2><svg t="1727428813465" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2268" width="200" height="200"><path d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z" fill="#C71D23" p-id="2269"></path></svg></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-7cd5de9c data-v-59ed6008 data-v-1dd0e4da><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-1dd0e4da><span class="vpi-more-horizontal icon" data-v-1dd0e4da></span></button><div class="menu" data-v-1dd0e4da><div class="VPMenu" data-v-1dd0e4da data-v-8a5b600a><!----><!--[--><!--[--><!----><div class="group" data-v-59ed6008><div class="item appearance" data-v-59ed6008><p class="label" data-v-59ed6008>主题</p><div class="appearance-action" data-v-59ed6008><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-59ed6008 data-v-9ec7c3ff data-v-f63253c3><span class="check" data-v-f63253c3><span class="icon" data-v-f63253c3><!--[--><span class="vpi-sun sun" data-v-9ec7c3ff></span><span class="vpi-moon moon" data-v-9ec7c3ff></span><!--]--></span></span></button></div></div></div><div class="group" data-v-59ed6008><div class="item social-links" data-v-59ed6008><div class="VPSocialLinks social-links-list" data-v-59ed6008 data-v-6a9f60a3><!--[--><a class="VPSocialLink no-icon" href="https://github.com/dcdy/everything-goes-well/" aria-label="github" target="_blank" rel="noopener" data-v-6a9f60a3 data-v-680784e2><span class="vpi-social-github"></span></a><a class="VPSocialLink no-icon" href="https://gitee.com/xia_mei_ting/everything-goes-well" aria-label target="_blank" rel="noopener" data-v-6a9f60a3 data-v-680784e2><svg t="1727428813465" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2268" width="200" height="200"><path d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z" fill="#C71D23" p-id="2269"></path></svg></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-7cd5de9c data-v-43e681ad><span class="container" data-v-43e681ad><span class="top" data-v-43e681ad></span><span class="middle" data-v-43e681ad></span><span class="bottom" data-v-43e681ad></span></span></button></div></div></div></div><div class="divider" data-v-7cd5de9c><div class="divider-line" data-v-7cd5de9c></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-6c7cdc44 data-v-5aa4a9cd><div class="container" data-v-5aa4a9cd><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-5aa4a9cd data-v-199e09cc><button data-v-199e09cc>回到顶部</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-6c7cdc44 data-v-be6b543f><div class="VPDoc has-aside" data-v-be6b543f data-v-aa13f155><!--[--><!--]--><div class="container" data-v-aa13f155><div class="aside" data-v-aa13f155><div class="aside-curtain" data-v-aa13f155></div><div class="aside-container" data-v-aa13f155><div class="aside-content" data-v-aa13f155><div class="VPDocAside" data-v-aa13f155 data-v-ac0489e8><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-ac0489e8 data-v-3047726d><div class="content" data-v-3047726d><div class="outline-marker" data-v-3047726d></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-3047726d>页面导航</div><ul class="VPDocOutlineItem root" data-v-3047726d data-v-c25fc99c><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-ac0489e8></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-aa13f155><div class="content-container" data-v-aa13f155><!--[--><!--]--><main class="main" data-v-aa13f155><div style="position:relative;" class="vp-doc _everything-goes-well-public_zh_examples_api external-link-icon-enabled" data-v-aa13f155><div><h1 id="运行时-api-示例" tabindex="-1">运行时 API 示例 <a class="header-anchor" href="#运行时-api-示例" aria-label="Permalink to &quot;运行时 API 示例&quot;">​</a></h1><p>此页面演示了 VitePress 提供的某些运行时 API 的用法。</p><p>主要的 <code>useData（）</code> API 可以用于访问当前页面的站点、主题和页面数据。它在 <code>.md</code> 和 <code>.vue</code> 文件中都可以使用：</p><div class="language-md vp-adaptive-theme line-numbers-mode"><button title="复制代码" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes OneLight dark-plus vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">script</span><span style="--shiki-light:#986801;--shiki-dark:#9CDCFE;"> setup</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C586C0;">import</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;"> { </span><span style="--shiki-light:#E45649;--shiki-dark:#9CDCFE;">useData</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;"> } </span><span style="--shiki-light:#A626A4;--shiki-dark:#C586C0;">from</span><span style="--shiki-light:#50A14F;--shiki-dark:#CE9178;"> &#39;vitepress&#39;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#569CD6;">const</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;"> { </span><span style="--shiki-light:#986801;--shiki-dark:#4FC1FF;">theme</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">, </span><span style="--shiki-light:#986801;--shiki-dark:#4FC1FF;">page</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">, </span><span style="--shiki-light:#986801;--shiki-dark:#4FC1FF;">frontmatter</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;"> } </span><span style="--shiki-light:#0184BC;--shiki-dark:#D4D4D4;">=</span><span style="--shiki-light:#4078F2;--shiki-dark:#DCDCAA;"> useData</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">()</span></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">script</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-light-font-weight:inherit;--shiki-dark:#569CD6;--shiki-dark-font-weight:bold;">## 结果</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#E45649;--shiki-light-font-weight:inherit;--shiki-dark:#569CD6;--shiki-dark-font-weight:bold;">### 主题数据</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">pre</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">{{ theme }}</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">pre</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">### 页面数据</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">pre</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">{{ page }}</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">pre</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">### 页面 Frontmatter</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">pre</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span><span style="--shiki-light:#383A42;--shiki-dark:#D4D4D4;">{{ frontmatter }}</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&lt;/</span><span style="--shiki-light:#E45649;--shiki-dark:#569CD6;">pre</span><span style="--shiki-light:#383A42;--shiki-dark:#808080;">&gt;</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="结果" tabindex="-1">结果 <a class="header-anchor" href="#结果" aria-label="Permalink to &quot;结果&quot;">​</a></h2><h3 id="主题数据" tabindex="-1">主题数据 <a class="header-anchor" href="#主题数据" aria-label="Permalink to &quot;主题数据&quot;">​</a></h3><div style="overflow:auto;"><pre>{
+  &quot;logo&quot;: {
+    &quot;src&quot;: &quot;/logo/logo.png&quot;,
+    &quot;width&quot;: 24,
+    &quot;height&quot;: 24
+  },
+  &quot;siteTitle&quot;: &quot;四时顺遂&quot;,
+  &quot;nav&quot;: [
+    {
+      &quot;text&quot;: &quot;常用&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;个人开发模板&quot;,
+              &quot;link&quot;: &quot;zh/templates/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;常用语法&quot;,
+              &quot;link&quot;: &quot;zh/grammars/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;常用功能&quot;,
+              &quot;link&quot;: &quot;zh/functions/微信扫码登录&quot;
+            }
+          ]
+        }
+      ]
+    },
+    {
+      &quot;text&quot;: &quot;Vue&quot;,
+      &quot;link&quot;: &quot;/zh/vue/Index&quot;,
+      &quot;activeMatch&quot;: &quot;/zh/vue&quot;
+    },
+    {
+      &quot;text&quot;: &quot;Electron&quot;,
+      &quot;link&quot;: &quot;/zh/electron/Index&quot;,
+      &quot;activeMatch&quot;: &quot;/zh/electron&quot;
+    },
+    {
+      &quot;text&quot;: &quot;uni-app&quot;,
+      &quot;link&quot;: &quot;/zh/uniapp/Index&quot;,
+      &quot;activeMatch&quot;: &quot;/zh/uniapp&quot;
+    },
+    {
+      &quot;text&quot;: &quot;样式&quot;,
+      &quot;link&quot;: &quot;/zh/styles/Index&quot;,
+      &quot;activeMatch&quot;: &quot;/zh/styles&quot;
+    },
+    {
+      &quot;text&quot;: &quot;杂七杂八&quot;,
+      &quot;link&quot;: &quot;/zh/others/Index&quot;,
+      &quot;activeMatch&quot;: &quot;/zh/others&quot;
+    },
+    {
+      &quot;text&quot;: &quot;Bug&quot;,
+      &quot;link&quot;: &quot;/zh/bugs/Index&quot;,
+      &quot;activeMatch&quot;: &quot;/zh/bugs&quot;
+    },
+    {
+      &quot;text&quot;: &quot;设置&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;component&quot;: &quot;ConfigSet&quot;,
+          &quot;props&quot;: {
+            &quot;title&quot;: &quot;设置&quot;
+          }
+        }
+      ]
+    }
+  ],
+  &quot;sidebar&quot;: {
+    &quot;/zh/templates&quot;: {
+      &quot;base&quot;: &quot;/zh/templates&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;个人开发模板&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/functions&quot;: {
+      &quot;base&quot;: &quot;/zh/functions&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;常用功能&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;发送验证码&quot;,
+              &quot;link&quot;: &quot;/发送验证码&quot;
+            },
+            {
+              &quot;text&quot;: &quot;国际化翻译&quot;,
+              &quot;link&quot;: &quot;/国际化翻译&quot;
+            },
+            {
+              &quot;text&quot;: &quot;截图和文件导出&quot;,
+              &quot;link&quot;: &quot;/截图和文件导出&quot;
+            },
+            {
+              &quot;text&quot;: &quot;可拖拽弹窗&quot;,
+              &quot;link&quot;: &quot;/可拖拽弹窗&quot;
+            },
+            {
+              &quot;text&quot;: &quot;密码输入框&quot;,
+              &quot;link&quot;: &quot;/密码输入框&quot;
+            },
+            {
+              &quot;text&quot;: &quot;评价弹窗&quot;,
+              &quot;link&quot;: &quot;/评价弹窗&quot;
+            },
+            {
+              &quot;text&quot;: &quot;人脸识别&quot;,
+              &quot;link&quot;: &quot;/人脸识别&quot;
+            },
+            {
+              &quot;text&quot;: &quot;数字滚动&quot;,
+              &quot;link&quot;: &quot;/数字滚动&quot;
+            },
+            {
+              &quot;text&quot;: &quot;微信聊天&quot;,
+              &quot;link&quot;: &quot;/微信聊天&quot;
+            },
+            {
+              &quot;text&quot;: &quot;微信扫码登录&quot;,
+              &quot;link&quot;: &quot;/微信扫码登录&quot;
+            },
+            {
+              &quot;text&quot;: &quot;文件转Base64&quot;,
+              &quot;link&quot;: &quot;/文件转Base64&quot;
+            },
+            {
+              &quot;text&quot;: &quot;文件MD5&quot;,
+              &quot;link&quot;: &quot;/文件MD5&quot;
+            },
+            {
+              &quot;text&quot;: &quot;原生上传图片&quot;,
+              &quot;link&quot;: &quot;/原生上传图片&quot;
+            },
+            {
+              &quot;text&quot;: &quot;自定义列表滚动指定位置&quot;,
+              &quot;link&quot;: &quot;/自定义列表滚动指定位置&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Grid网格布局自适应&quot;,
+              &quot;link&quot;: &quot;/Grid网格布局自适应&quot;
+            },
+            {
+              &quot;text&quot;: &quot;VideoJS播放视频列表&quot;,
+              &quot;link&quot;: &quot;/VideoJS播放视频列表&quot;
+            },
+            {
+              &quot;text&quot;: &quot;vue切换皮肤模式&quot;,
+              &quot;link&quot;: &quot;/vue切换皮肤模式&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/grammars&quot;: {
+      &quot;base&quot;: &quot;/zh/grammars&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;常用语法&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;本地缓存&quot;,
+              &quot;link&quot;: &quot;/本地缓存&quot;
+            },
+            {
+              &quot;text&quot;: &quot;数组对象&quot;,
+              &quot;link&quot;: &quot;/数组对象&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Lodash&quot;,
+              &quot;link&quot;: &quot;/Lodash&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/vue&quot;: {
+      &quot;base&quot;: &quot;/zh/vue&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Vue&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;常用Hooks&quot;,
+              &quot;link&quot;: &quot;/常用Hooks&quot;
+            },
+            {
+              &quot;text&quot;: &quot;第三方配置&quot;,
+              &quot;collapsed&quot;: false,
+              &quot;items&quot;: [
+                {
+                  &quot;text&quot;: &quot;配置SVG图标&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/配置SVG图标&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;Echarts&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/Echarts&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;Layout布局&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/Layout布局&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;Mitt全局事件通信&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/Mitt全局事件通信&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;Pinia&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/Pinia&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;Unocss原子化&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/Unocss原子化&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;Vue-Router路由&quot;,
+                  &quot;link&quot;: &quot;/第三方配置/Vue-Router路由&quot;
+                }
+              ]
+            },
+            {
+              &quot;text&quot;: &quot;指令&quot;,
+              &quot;collapsed&quot;: false,
+              &quot;items&quot;: [
+                {
+                  &quot;text&quot;: &quot;custom&quot;,
+                  &quot;link&quot;: &quot;/指令/custom&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;text、pre、html&quot;,
+                  &quot;link&quot;: &quot;/指令/text、pre、html&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-bind&quot;,
+                  &quot;link&quot;: &quot;/指令/v-bind&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-cloak&quot;,
+                  &quot;link&quot;: &quot;/指令/v-cloak&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-for&quot;,
+                  &quot;link&quot;: &quot;/指令/v-for&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-if和v-show&quot;,
+                  &quot;link&quot;: &quot;/指令/v-if和v-show&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-memo&quot;,
+                  &quot;link&quot;: &quot;/指令/v-memo&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-model&quot;,
+                  &quot;link&quot;: &quot;/指令/v-model&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-on&quot;,
+                  &quot;link&quot;: &quot;/指令/v-on&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-once&quot;,
+                  &quot;link&quot;: &quot;/指令/v-once&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;v-slot&quot;,
+                  &quot;link&quot;: &quot;/指令/v-slot&quot;
+                }
+              ]
+            },
+            {
+              &quot;text&quot;: &quot;组件库&quot;,
+              &quot;collapsed&quot;: false,
+              &quot;items&quot;: [
+                {
+                  &quot;text&quot;: &quot;ElementPlus&quot;,
+                  &quot;link&quot;: &quot;/组件库/ElementPlus&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;ElementUI&quot;,
+                  &quot;link&quot;: &quot;/组件库/ElementUI&quot;
+                }
+              ]
+            },
+            {
+              &quot;text&quot;: &quot;Html中使用Vue&quot;,
+              &quot;link&quot;: &quot;/Html中使用Vue&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Vue2升级Vue3&quot;,
+              &quot;link&quot;: &quot;/Vue2升级Vue3&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/electron&quot;: {
+      &quot;base&quot;: &quot;/zh/electron&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Electron&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;操作系统&quot;,
+              &quot;link&quot;: &quot;/操作系统&quot;
+            },
+            {
+              &quot;text&quot;: &quot;配置&quot;,
+              &quot;link&quot;: &quot;/配置&quot;
+            },
+            {
+              &quot;text&quot;: &quot;直播相关&quot;,
+              &quot;link&quot;: &quot;/直播相关&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/uniapp&quot;: {
+      &quot;base&quot;: &quot;/zh/uniapp&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;uni-app&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;uView&quot;,
+              &quot;link&quot;: &quot;/uView&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/styles&quot;: {
+      &quot;base&quot;: &quot;/zh/styles&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;样式&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Canvas&quot;,
+              &quot;link&quot;: &quot;/Canvas&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/others&quot;: {
+      &quot;base&quot;: &quot;/zh/others&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;杂七杂八&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            },
+            {
+              &quot;text&quot;: &quot;模块化&quot;,
+              &quot;link&quot;: &quot;/模块化&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Axios&quot;,
+              &quot;collapsed&quot;: false,
+              &quot;items&quot;: [
+                {
+                  &quot;text&quot;: &quot;基础知识&quot;,
+                  &quot;link&quot;: &quot;/Axios/Index&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;封装&quot;,
+                  &quot;link&quot;: &quot;/Axios/封装&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;拦截器&quot;,
+                  &quot;link&quot;: &quot;/Axios/拦截器&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;配置&quot;,
+                  &quot;link&quot;: &quot;/Axios/配置&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;请求&quot;,
+                  &quot;link&quot;: &quot;/Axios/请求&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;取消请求&quot;,
+                  &quot;link&quot;: &quot;/Axios/取消请求&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;响应&quot;,
+                  &quot;link&quot;: &quot;/Axios/响应&quot;
+                }
+              ]
+            },
+            {
+              &quot;text&quot;: &quot;Fetch&quot;,
+              &quot;collapsed&quot;: false,
+              &quot;items&quot;: [
+                {
+                  &quot;text&quot;: &quot;基础知识&quot;,
+                  &quot;link&quot;: &quot;/Fetch/Index&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;拦截器&quot;,
+                  &quot;link&quot;: &quot;/Fetch/拦截器&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;请求&quot;,
+                  &quot;link&quot;: &quot;/Fetch/请求&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;请求头&quot;,
+                  &quot;link&quot;: &quot;/Fetch/请求头&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;取消请求&quot;,
+                  &quot;link&quot;: &quot;/Fetch/取消请求&quot;
+                },
+                {
+                  &quot;text&quot;: &quot;响应&quot;,
+                  &quot;link&quot;: &quot;/Fetch/响应&quot;
+                }
+              ]
+            },
+            {
+              &quot;text&quot;: &quot;Git&quot;,
+              &quot;link&quot;: &quot;/Git&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Npm&quot;,
+              &quot;link&quot;: &quot;/Npm&quot;
+            },
+            {
+              &quot;text&quot;: &quot;Typora使用&quot;,
+              &quot;link&quot;: &quot;/Typora使用&quot;
+            }
+          ]
+        }
+      ]
+    },
+    &quot;/zh/bugs&quot;: {
+      &quot;base&quot;: &quot;/zh/bugs&quot;,
+      &quot;items&quot;: [
+        {
+          &quot;text&quot;: &quot;Bug&quot;,
+          &quot;items&quot;: [
+            {
+              &quot;text&quot;: &quot;基础知识&quot;,
+              &quot;link&quot;: &quot;/Index&quot;
+            }
+          ]
+        }
+      ]
+    }
+  },
+  &quot;outline&quot;: {
+    &quot;level&quot;: [
+      2,
+      4
+    ],
+    &quot;label&quot;: &quot;页面导航&quot;
+  },
+  &quot;editLink&quot;: {
+    &quot;pattern&quot;: &quot;https://github.com/dcdy/everything-goes-well/edit/main/docs/:path&quot;,
+    &quot;text&quot;: &quot;在 GitHub 上编辑此页面&quot;
+  },
+  &quot;lastUpdated&quot;: {
+    &quot;text&quot;: &quot;最后更新于&quot;,
+    &quot;formatOptions&quot;: {
+      &quot;dateStyle&quot;: &quot;short&quot;,
+      &quot;timeStyle&quot;: &quot;short&quot;
+    }
+  },
+  &quot;docFooter&quot;: {
+    &quot;prev&quot;: &quot;上一页&quot;,
+    &quot;next&quot;: &quot;下一页&quot;
+  },
+  &quot;footer&quot;: {
+    &quot;copyright&quot;: &quot;版权所有 © 2020-2025 dcdyxmt@163.com&quot;
+  },
+  &quot;socialLinks&quot;: [
+    {
+      &quot;icon&quot;: &quot;github&quot;,
+      &quot;link&quot;: &quot;https://github.com/dcdy/everything-goes-well/&quot;
+    },
+    {
+      &quot;icon&quot;: {
+        &quot;svg&quot;: &quot;&lt;svg t=\&quot;1727428813465\&quot; class=\&quot;icon\&quot; viewBox=\&quot;0 0 1024 1024\&quot; version=\&quot;1.1\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; p-id=\&quot;2268\&quot; width=\&quot;200\&quot; height=\&quot;200\&quot;&gt;&lt;path d=\&quot;M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z\&quot; fill=\&quot;#C71D23\&quot; p-id=\&quot;2269\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&quot;
+      },
+      &quot;link&quot;: &quot;https://gitee.com/xia_mei_ting/everything-goes-well&quot;
+    }
+  ],
+  &quot;returnToTopLabel&quot;: &quot;回到顶部&quot;,
+  &quot;sidebarMenuLabel&quot;: &quot;菜单&quot;,
+  &quot;darkModeSwitchLabel&quot;: &quot;主题&quot;,
+  &quot;lightModeSwitchTitle&quot;: &quot;切换到浅色模式&quot;,
+  &quot;darkModeSwitchTitle&quot;: &quot;切换到深色模式&quot;,
+  &quot;externalLinkIcon&quot;: true,
+  &quot;search&quot;: {
+    &quot;provider&quot;: &quot;local&quot;,
+    &quot;options&quot;: {
+      &quot;translations&quot;: {
+        &quot;button&quot;: {
+          &quot;buttonText&quot;: &quot;搜索文档&quot;,
+          &quot;buttonAriaLabel&quot;: &quot;搜索文档&quot;
+        },
+        &quot;modal&quot;: {
+          &quot;noResultsText&quot;: &quot;无法找到相关结果&quot;,
+          &quot;resetButtonTitle&quot;: &quot;清除查询条件&quot;,
+          &quot;displayDetails&quot;: &quot;显示详情&quot;,
+          &quot;backButtonTitle&quot;: &quot;返回&quot;,
+          &quot;footer&quot;: {
+            &quot;selectText&quot;: &quot;选择&quot;,
+            &quot;navigateText&quot;: &quot;切换&quot;,
+            &quot;closeText&quot;: &quot;关闭&quot;
+          }
+        }
+      }
+    }
+  }
+}</pre></div><h3 id="页面数据" tabindex="-1">页面数据 <a class="header-anchor" href="#页面数据" aria-label="Permalink to &quot;页面数据&quot;">​</a></h3><div style="overflow:auto;"><pre>{
+  &quot;title&quot;: &quot;运行时 API 示例&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;frontmatter&quot;: {
+    &quot;outline&quot;: &quot;deep&quot;
+  },
+  &quot;headers&quot;: [],
+  &quot;relativePath&quot;: &quot;zh/examples/api.md&quot;,
+  &quot;filePath&quot;: &quot;zh/examples/api.md&quot;,
+  &quot;lastUpdated&quot;: 1738170500000
+}</pre></div><h3 id="页面-frontmatter" tabindex="-1">页面 Frontmatter <a class="header-anchor" href="#页面-frontmatter" aria-label="Permalink to &quot;页面 Frontmatter&quot;">​</a></h3><div style="overflow:auto;"><pre>{
+  &quot;outline&quot;: &quot;deep&quot;
+}</pre></div><h2 id="更多" tabindex="-1">更多 <a class="header-anchor" href="#更多" aria-label="Permalink to &quot;更多&quot;">​</a></h2><p>查看文档中的 <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">运行时 API 的完整列表</a>.</p></div></div></main><footer class="VPDocFooter" data-v-aa13f155 data-v-8b256f6a><!--[--><!--[--><!--[--><!--[--><div style="display:none;" class="vitepress-backTop-main" title="返回顶部" data-v-320cd180><svg t="1720595052079" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4279" width="200" height="200" data-v-320cd180><path d="M752.736 431.063C757.159 140.575 520.41 8.97 504.518 0.41V0l-0.45 0.205-0.41-0.205v0.41c-15.934 8.56-252.723 140.165-248.259 430.653-48.21 31.457-98.713 87.368-90.685 184.074 8.028 96.666 101.007 160.768 136.601 157.287 35.595-3.482 25.232-30.31 25.232-30.31l12.206-50.095s52.47 80.569 69.304 80.528c15.114-1.23 87-0.123 95.6 0h0.82c8.602-0.123 80.486-1.23 95.6 0 16.794 0 69.305-80.528 69.305-80.528l12.165 50.094s-10.322 26.83 25.272 30.31c35.595 3.482 128.574-60.62 136.602-157.286 8.028-96.665-42.475-152.617-90.685-184.074z m-248.669-4.26c-6.758-0.123-94.781-3.359-102.891-107.192 2.95-98.714 95.97-107.438 102.891-107.93 6.964 0.492 99.943 9.216 102.892 107.93-8.11 103.833-96.174 107.07-102.892 107.192z m-52.019 500.531c0 11.838-9.42 21.382-21.012 21.382a21.217 21.217 0 0 1-21.054-21.34V821.74c0-11.797 9.421-21.382 21.054-21.382 11.591 0 21.012 9.585 21.012 21.382v105.635z m77.333 57.222a21.504 21.504 0 0 1-21.34 21.626 21.504 21.504 0 0 1-21.34-21.626V827.474c0-11.96 9.543-21.668 21.299-21.668 11.796 0 21.38 9.708 21.38 21.668v157.082z m71.147-82.043c0 11.796-9.42 21.34-21.053 21.34a21.217 21.217 0 0 1-21.013-21.34v-75.367c0-11.755 9.421-21.299 21.013-21.299 11.632 0 21.053 9.544 21.053 21.3v75.366z" fill="#FFF" p-id="4280" data-v-320cd180></path></svg></div><!--]--><!--]--><!--]--><!--]--><div class="edit-info" data-v-8b256f6a><div class="edit-link" data-v-8b256f6a><a class="VPLink link vp-external-link-icon no-icon edit-link-button" href="https://github.com/dcdy/everything-goes-well/edit/main/docs/zh/examples/api.md" target="_blank" rel="noreferrer" data-v-8b256f6a><!--[--><span class="vpi-square-pen edit-link-icon" data-v-8b256f6a></span> 在 GitHub 上编辑此页面<!--]--></a></div><div class="last-updated" data-v-8b256f6a><p class="VPLastUpdated" data-v-8b256f6a data-v-c459600f>最后更新于: <time datetime="2025-01-29T17:08:20.000Z" data-v-c459600f></time></p></div></div><!----></footer><!--[--><!--[--><!--[--><!----><!--]--><!--]--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-6c7cdc44 data-v-37185139><div class="container" data-v-37185139><!----><p class="copyright" data-v-37185139>版权所有 © 2020-2025 dcdyxmt@163.com</p></div></footer><!--[--><!--]--></div></div>
+    
+    
+  </body>
+</html>

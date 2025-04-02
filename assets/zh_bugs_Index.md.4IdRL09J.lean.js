@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.CF7B9edl.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"zh/bugs/Index.md","filePath":"zh/bugs/Index.md","lastUpdated":1743593082000}'),s={name:"zh/bugs/Index.md"};function n(r,o,d,c,p,_){return a(),t("div")}const f=e(s,[["render",n]]);export{m as __pageData,f as default};
